@@ -1,9 +1,9 @@
 "use strict";
 
-let filterSelect = document.getElementById("filterSelect");
-let bevTypeDropdown = document.getElementById("bevTypeDropdown");
-let productTable = document.getElementById("productTable");
-let productTableBody = document.getElementById("productTableBody");
+const filterSelect = document.getElementById("filterSelect");
+const bevTypeDropdown = document.getElementById("bevTypeDropdown");
+const productTable = document.getElementById("productTable");
+const productTableBody = document.getElementById("productTableBody");
 
 window.onload = function () {
   filterSelect.onchange = FilterSelectOnChange;
