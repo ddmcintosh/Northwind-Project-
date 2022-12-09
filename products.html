@@ -109,35 +109,40 @@
                                 <label for="searchByCategory" class="form-label">View Some of our many products</label>
 
 
-                                <select id="searchCategory" class="form-control" name="category">
-                                    <option>Select one</option>
-                                    <option>Search By Category</option>
-                                    <option>View all</option>
+                                <select id="filterSelect" class="form-control" name="category">
+                                    <option value="selectOne">Select one</option>
+                                    <option value="searchByCategory">Search By Category</option>
+                                    <option value="viewAll">View all</option>
                                 </select>
+
+                                <select id="bevTypeDropdown" class="form-control" style="display:none"></select>
+
+                                <table class="table" id="productTable" style="display:none">
+
+                                    <thead class="productTableHead">
+                                        <th>Name: </th>
+                                        <th>Price:</th>
+                                        <th>Product ID:</th>
+                                    </thead>
+                                    <tbody id="productTableBody">
+                                    </tbody>
+                                </table>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div id="bevDropdown" class="col-11">
-                        <form>
-                            <select id="bevTypeDropdown" class="form-control"></select>
-                        </form>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col">
-                        <div id="divResults">
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
         </main>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <script src="scripts/products.js"></script>
 
     </body>
 
