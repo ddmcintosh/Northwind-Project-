@@ -79,3 +79,18 @@ function BevTypeDropdownOnChange() {
 function clearTable(table) {
   table.replaceChildren();
 }
+
+function sort(data) {
+  data.sort((a, b) => {
+    let nameA = a.productName.toLowerCase(),
+      nameB = b.productName.toLowerCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+}
