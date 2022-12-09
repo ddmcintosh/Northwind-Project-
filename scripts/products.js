@@ -12,7 +12,7 @@ window.onload = function () {
 
 function FilterSelectOnChange() {
   if (filterSelect.value == "searchByCategory") {
-    initCategorySelect(bevTypeDropdown);
+    initBevTypeDropdownSelect(bevTypeDropdown);
     bevTypeDropdown.style.display = "block";
   } else if (filterSelect.value == "viewAll") {
     clearTable(productTableBody);
@@ -37,7 +37,7 @@ function FilterSelectOnChange() {
   }
 }
 
-function initCategorySelect(select) {
+function initBevTypeDropdownSelect(select) {
   select.length = 0;
   let option = new Option("Select a category", "select");
   select.appendChild(option);
@@ -67,7 +67,7 @@ function BevTypeDropdownOnChange() {
             let cell1 = row.insertCell(0);
             let cell2 = row.insertCell(1);
             let cell3 = row.insertCell(2);
-            cell1.innerHTML = `<a href="productdetails.html?productId=${x.productId}">${x.productName}</a>`;
+            cell1.innerHTML = `<a href="details.html?productId=${x.productId}">${x.productName}</a>`;
             cell2.innerHTML = `$${parseFloat(x.unitPrice).toFixed(2)}`;
             cell3.innerHTML = x.productId;
           }
